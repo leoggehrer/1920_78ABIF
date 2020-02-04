@@ -8,6 +8,10 @@ Da der Zugriff nur über die festgelegten Operationen erfolgt, sind die Daten nac
   ![alt text](StackImplement.jpg "Stack Implement") 
 
   - Ein Stack funktioniert in C# nach den last in first out (LIFO) Prinzip.
+  - Im deutschen heißt Stack Stapel oder Kellerspeicher.
+  - Die meisten Microprozessoren unterstützen einen Stack direkt in der Hardware.
+  - Der Microprozessor hat für den Stack einen speziellen Speicher: der Stackpointer. Er zeigt auf den aktuellen Stapeleintrag.
+  - Praktisches Beispiel: Passagiere die eine Flugzeug besteigen und es dann in umgekehrter Reihenfolge verlassen.
   - Deklaration eines Stacks: Stack st = new Stack()
   - Hinzufügen eines Elements zu dem Stack: Stack.push(element)
   - Element vom Stack herunternehmen: Stack.pop()
