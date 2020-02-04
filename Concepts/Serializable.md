@@ -1,5 +1,5 @@
 # Technik/Serialisierung
-
+## Autor: Peterseil Christoph
 ### Erklären Sie die Technik 'Serialisierung von Objekten' und 'Deserialisierung von Objekten'.
 
 Bei der Serialisierung wird ein Objekt in einen Stream konvertiert, um das Objekt zu speichern oder in den Speicher, einer Datenbank oder einer Datei zu übertragen.  
