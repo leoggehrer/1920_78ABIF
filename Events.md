@@ -3,7 +3,7 @@
 Beim Programmieren kommt es sehr oft vor das ein bestimmter Quellcode bei einem bestimmten Ereignis (Event) ausgeführt werden muss oder auch dass ein bestimmter Status erreicht wird.  
 In vielen Fällen liegt es hierbei an “fremden” Objekten, dass etwas passiert ist, dann soll jedoch entsprechend darauf reagiert werden.  
 Eine Nachricht muss von diesem “fremden” Objekt empfangen werden, wenn das entsprechende Ereignis (Event) eintritt.  
-Es gibt seitens Visual Studio schon vorgefertige Events z.B.: Click-Event  bei anklicken eines Buttons.  
+Es gibt seitens Visual Studio schon vordefinierte Events z.B.: Click-Event  bei anklicken eines Buttons.  
 Man kann aber auch eigene Events definieren bzw. festlegen.  
  
 <b>Beispiel 1:</b>  
