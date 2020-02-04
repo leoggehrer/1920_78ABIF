@@ -23,5 +23,5 @@ Simulationen - Eine FastClock wird verwendet um die Simualtion zu beschleunigen,
 <span style="color:darkblue">
 **Ein Anbieter (Observable)** muss die Schnittstelle IObservable und eine IObservable.Subscribe() Methode implementieren die der Observer (Beobachter) aufrufen kann um Informationen zu erhalten. Eine IDisposeable-Implementierung ist notwendig um Observer wieder abzumelden.  
 **Der Beobachter (Observer)** muss die Schnittstelle IObserver und die drei Methoden: IObserver.OnNext(), IObserver.OnError() und IObserver.OnComplete() implementieren.
-DIE Verweise von den Observer die sich beim Observable angemeldet haben, werden in einem Container (List) gespeichert um Informationen zu erhalten.
+Die Verweise von den Observer die sich beim Observable angemeldet haben, werden in einem Container (List) gespeichert um Informationen zu erhalten.
 </span>
