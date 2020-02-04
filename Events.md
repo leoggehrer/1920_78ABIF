@@ -3,9 +3,10 @@
 Beim Programmieren kommt es sehr oft vor das ein bestimmter Quellcode bei einem bestimmten Ereignis (Event) ausgeführt werden muss oder auch dass ein bestimmter Status erreicht wird.  
 In vielen Fällen liegt es hierbei an “fremden” Objekten, dass etwas passiert ist, dann soll jedoch entsprechend darauf reagiert werden.  
 Eine Nachricht muss von diesem “fremden” Objekt empfangen werden, wenn das entsprechende Ereignis (Event) eintritt.  
-Es gibt seitens Visual Studio schon vorgefertige Events z.B.: click-Event  bei anclicken eines Buttons.  
+Es gibt seitens Visual Studio schon vorgefertige Events z.B.: Click-Event  bei anklicken eines Buttons.  
 Man kann aber auch eigene Events definieren bzw. festlegen.  
-Beispiel:  
+ 
+<b>Beispiel 1:</b>  
 ```
 // Event festlegen/ definieren
 button1.Click += new EventHandler(Button1_Click);
@@ -16,6 +17,35 @@ private void Button1_Click(object sender, EventArgs e)
     //TODO
 }
 ```  
+<b>Beispiel 2:</b>  
+```
+private int counter;
+Timer t = new Timer();
+
+    // Timer initialisieren
+    private void InitializeTimer()
+    {
+        counter = 0;
+        t.Interval = 750;
+        t.Enabled = true;
+
+        t.Tick += new EventHandler(timer1_Tick);
+    }
+
+    // Methode die aufgerufen wird wenn das Tick-Ereignis ausgelöst wurde
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+        if (counter >= 3)
+        {
+            t.Enabled = false;                
+        }
+        else
+        {
+            // TODO
+            counter++;
+        }
+    }
+```
 ### Frühere Prinzipien:  
 #### Polling, Interrupt  
 ##### Polling
