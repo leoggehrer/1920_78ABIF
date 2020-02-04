@@ -1,4 +1,9 @@
 ### Erklären Sie die folgenden abstrakten Datenstrukturen:
+Der Begriff Datenstrukture wird oft gleichbedeutend mit Datentyp gebraucht.
+Von Datenstrukturen spricht man, wenn aus einfachen Datentypen zusammengesetzte Datentypen aufgebaut werden.
+Soll heißen eine Datenstruktur dient zur Speicherung und Organisation von Daten. Durch Operatoren wird festgelegt wie auf die Daten der Datenstruktur zugegriffen werden kann.
+Da der Zugriff nur über die festgelegten Operationen erfolgt, sind die Daten nach außen gekapselt. 
+
 #### - Stack:
   ![alt text](StackImplement.jpg "Stack Implement") 
 
