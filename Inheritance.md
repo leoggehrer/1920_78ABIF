@@ -3,7 +3,7 @@
 
 - Erklären Sie die Relation der _Vererbung_ und geben Sie Entscheidungshilfen zur Evaluierung von _Vererbungsstrukturen_ an (nennen Sie mindestens ein Beispiel für eine gültige und eine ungültige Vererbung).  
 
-<span style="color:darkblue">Durch Vererbung ist esmöglich Klassen zu erweitern. Die public Member der Oberklasse werden an die erbende Klasse weitervererbt. Dabei spricht man auch von einer is-a (ist ein) beziehung.
+<span style="color:darkblue">Durch Vererbung ist es möglich Klassen zu erweitern. Die public Member der Oberklasse werden an die erbende Klasse weitervererbt. Dabei spricht man auch von einer is-a (ist ein) beziehung.
 </span>
 
 Beispiel:
