@@ -15,6 +15,8 @@ System.Console.WriteLine(type);
 ```  
 Ergebnis: "System.Int32"  
 ##### Beispiel 2:  
+In diesem Beispiel wird Reflection verwendet, um den vollständigen Namen des geladenen Assembly abzurufen.
+
 ```
 // Reflection verwenden um entsprechende Informationen über ein Assembly zu erhalten:  
 System.Reflection.Assembly info = typeof(System.Int32).Assembly;  
