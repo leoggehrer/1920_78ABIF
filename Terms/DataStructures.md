@@ -1,3 +1,5 @@
+# Terms
+Autor: Markus Freudenthaler
 ### Erklären Sie die folgenden abstrakten Datenstrukturen:
 Der Begriff Datenstrukture wird oft gleichbedeutend mit Datentyp gebraucht.
 Von Datenstrukturen spricht man, wenn aus einfachen Datentypen zusammengesetzte Datentypen aufgebaut werden.

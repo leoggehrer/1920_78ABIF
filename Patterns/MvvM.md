@@ -1,3 +1,5 @@
+# Patterns
+Autor: Markus Freudenthaler
 ### Model View View-Model (MVVM) Pattern
   ![alt text](MVVMPattern.png "MVVM Pattern") 
 
