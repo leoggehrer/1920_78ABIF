@@ -4,7 +4,9 @@ Zur Laufzeit eines Programms kann es notwendig sein, dass sich das Programm selb
 In C# kann dies mit der Funktionalität von Reflections erreicht werden.  
 Die Reflection „reflektiert” zur Laufzeit aufrufbare Assemblys, Module und Typen und bietet so dynamischen Zugriff auf Objekte, Methoden und Metadaten, welche erst zur Laufzeit bekannt werden.  
 Eine Programmiersprache, welche diese Möglichkeit zur “Reflektion” der eigenen Programminhalte hat, kann ihre eigene Struktur selbst zur Laufzeit analysieren und auf sie Einfluss nehmen.  
-Kurz gesagt, die Reflection macht es möglich eine Instanz einer Klasse zu erstellen und darauf Methoden aufzurufen, die zur Compile-Zeit noch nicht bekannt sind. Außerdem ist es so möglich den Inhalt einer DLL (z.B.: Klassen, Methoden) aufzulisten ohne den Quellcode zu kennen.  
+
+Bei einer Methode sind das unter anderem deren Sichtbarkeit, der Datentyp des Rückgabewertes oder der Typ der Übergabeparameter. 
+Kurz gesagt, die Reflection macht es möglich eine Instanz einer Klasse zu erstellen und darauf Methoden aufzurufen, die zur Compile-Zeit noch nicht bekannt sind. Außerdem ist es so möglich den Inhalt einer DLL (z.B.: Klassen, Methoden) aufzulisten ohne den Quellcode zu kennen.   
 Mit <b>typeof(...)</b> kommt man zum Beispiel an die Informationen eines bekannten Typs.  
 ##### Beispiel 1: 
 ```
