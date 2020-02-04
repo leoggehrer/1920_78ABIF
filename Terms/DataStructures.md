@@ -1,8 +1,17 @@
 ### Erklären Sie die folgenden abstrakten Datenstrukturen:
+Der Begriff Datenstrukture wird oft gleichbedeutend mit Datentyp gebraucht.
+Von Datenstrukturen spricht man, wenn aus einfachen Datentypen zusammengesetzte Datentypen aufgebaut werden.
+Soll heißen eine Datenstruktur dient zur Speicherung und Organisation von Daten. Durch Operatoren wird festgelegt wie auf die Daten der Datenstruktur zugegriffen werden kann.
+Da der Zugriff nur über die festgelegten Operationen erfolgt, sind die Daten nach außen gekapselt. 
+
 #### - Stack:
   ![alt text](StackImplement.jpg "Stack Implement") 
 
   - Ein Stack funktioniert in C# nach den last in first out (LIFO) Prinzip.
+  - Im deutschen heißt Stack Stapel oder Kellerspeicher.
+  - Die meisten Microprozessoren unterstützen einen Stack direkt in der Hardware.
+  - Der Microprozessor hat für den Stack einen speziellen Speicher: der Stackpointer. Er zeigt auf den aktuellen Stapeleintrag.
+  - Praktisches Beispiel: Passagiere die eine Flugzeug besteigen und es dann in umgekehrter Reihenfolge verlassen.
   - Deklaration eines Stacks: Stack st = new Stack()
   - Hinzufügen eines Elements zu dem Stack: Stack.push(element)
   - Element vom Stack herunternehmen: Stack.pop()
@@ -84,6 +93,6 @@
     4: Anazhl der Elemente in der Collection    
     5: Element in der Collection enthalten
 ##### Ausgabe:
-  ![alt text](CollectionOutput.png "Collection Output") 
+  ![alt text](CollectionOutput.PNG "Collection Output") 
 
 
