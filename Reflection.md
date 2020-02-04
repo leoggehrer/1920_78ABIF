@@ -24,4 +24,4 @@ In diesem Beispiel wird Reflection verwendet, um den vollständigen Namen des gel
 System.Reflection.Assembly info = typeof(System.Int32).Assembly;  
 System.Console.WriteLine(info);
 ```  
-Beispielergebnis: "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" 
+Ergebnis: "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" 
