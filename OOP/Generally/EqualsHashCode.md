@@ -29,7 +29,7 @@ Bedeutet, dass die Typen zweier Instanzen gleich sind. Dies kann über den is Opd
 </code></pre>
 
 #### Wertegleichheit ###
-Wertegelichheit besteht wenn die Werte zweier Instanzen gleich sind und geht grundsätzlich mit der Typengelichheit einher.
+Wertegleichheit besteht wenn die Werte zweier Instanzen gleich sind und geht grundsätzlich mit der Typengleichheit einher.
 <pre><code class='language-cs'>
         public override bool Equals(Object obj)
         {
