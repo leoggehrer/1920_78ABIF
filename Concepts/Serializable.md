@@ -6,9 +6,9 @@ Bei der Serialisierung wird ein Objekt in einen Stream konvertiert, um das Objek
 
 Der Hauptzweck ist ein Objekts zu speichern, um es bei Bedarf neu erstellen (wiederherstellen) zu können. Der umgekehrte Vorgang der Serealisierung wird Deserialisierung genannt.  
 
-Im .Net Framework gibt verschieden vorgefertigte Serializer z.B. XML, JSON oder oder Binary, man kann aber auch selber einen Serializer schreiben!  
+Im .Net Framework gibt verschieden vorgefertigte Serializer z.B. XML, JSON oder Binary, man kann aber auch selber einen Serializer schreiben!  
 
-Als Beispiel die Seralisierung und Deserealisierung einer Klasse (Liste von Serealisierbaren Objekten) in eine Datei.
+Als Beispiel der Seralisierung und Deserealisierung einer Klasse (Liste von Serealisierbaren Objekten) in eine Datei.
  
 ```csharp
 [Serializable]
@@ -27,6 +27,7 @@ public void Serialize()
 
     formatter.Serialize(stream, tests);
     stream.Close();
+    ...
 }
 
 //Deserealisierung
@@ -36,6 +37,7 @@ public void Deserialize()
     IFormatter formatter = new BinaryFormatter();
     Stream stream = new FileStream(filepath, FileMode.Open, FileAccess.Read);
     var tests = (List<Test>)formatter.Deserialize(stream);
+    ...
 }
 ```
 <br/>
