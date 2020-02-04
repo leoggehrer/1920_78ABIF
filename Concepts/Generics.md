@@ -22,32 +22,30 @@ class List<T> {
 In C Beispielsweise konnten void Zeiger auf alle Datentypen verweisen, auf diese Weise konnte der Datentyp ebenfalls ausgetauscht werden.
 
 ```
-struct Node {
-  Node* next
-  void* value;
+class Node {
+  Node next
+  Object value;
+
+  Node(Object value){
+    this.value = value;
+  }
 }
-struct Stack{
-  Node* anker;
+class Stack{
+  Node anker;
   
-  void push(void* element){
-    Node* newNode = (Node*)malloc(sizeof(Node));
-    newNode.value = element;
-    if(anker==NULL) anker = newNode;
-    else{
-      newNode.next = anker;
-      anker = newNode;
+    void push(Object element) {
+        Node newNode = new Node(element);
+        newNode.next = anker;
+        anker = newNode;
     }
-  }
-  void* pop(){
-    Node* tmp = anker;
-    void* value = NULL;
-    if(anker != NULL){
+    Object pop() {
+      if(anker==NULL) {
+          return NULL;
+      }
+      Object tmp = anker.value;
       anker = anker.next;
-      value = tmp.value;
-      free(tmp);
+      return tmp;
     }
-    return value;
-  }
 }
 ```
 

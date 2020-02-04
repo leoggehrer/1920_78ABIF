@@ -20,13 +20,18 @@ Beschreiben Sie das Muster nach den folgenden Punkten:
   - Netzwerk verbindungen
   - ...
 - Struktur des Musters
+  ```
   class MySingleton{
-    private MySingleton* instance;
+    private MySingleton instance;
   
     private MySingleton(){
       //do something
     }
     public static MySingleton GetInstance(){
+        if(instance == NULL){
+          instance = new MySingleton();
+        }
         return instance;
     }
   }
+  ```
