@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1ADEF5B3-B3AB-41FA-A0B7-4F39641C93A3}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Eichinger.pptx = ..\..\..\Desktop\Eichinger.pptx
 		PR_Fragenkatalog_TeilA.md = PR_Fragenkatalog_TeilA.md
 		PR_Themenkatalog.md = PR_Themenkatalog.md
 		README.md = README.md
