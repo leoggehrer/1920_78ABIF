@@ -263,19 +263,20 @@ nun kann das Program ausgeführt werden und bringt folgendes Ergebnis:
 #### Erläutern Sie die Standard-Methoden
 
 - Welche kennen Sie (nennen Sie mind. 3)?
-  + ToString()
-  + Console.WriteLine()
-  + \<T>.Parse
-  + \<T>.TryParse
-  + Equals(object obj)
+  + CompareTo
+  + Equals
+  + GetHashCode
+  + GetType
+  + GetTypeCode
+  + ToString
   
 - Geben Sie deren Zweck an
-  + ToString() wandelt jeden nicht-String in einen String um.
-  + Console.WriteLine() ermöglicht eine Ausgabe an die Konsole.
-  + \<T>.Parse wobei T für int, double, string stehen kann wandelt einen string in eben diesen Typ T um.
-  Nicht durchführbare Versuche z.B. int.Parse(7ABIF) wird einen Exception verursachen.
-  + \<T>.TryParse funktioniert ähnlich wie \<T>.Parse, Rückgabewert ist jedoch ein boolscher Wert.
-  + Equals(object obj) vergleicht ob obj gleich dem Objekt ist, das die Methode Aufruft.
+  + **CompareTo** vergleicht eine Instatnz mit einem anderem Objekt und gibt einen Integer als ergebnis zurück (-1,0,1)
+  + **Equals** vergleicht ob eine Instanz gleich einem spezifizierten Objekt ist. Rückgabewert ist ein boolscher Wert.
+  + **GetHashCode** liefert den Hashcode der Instanz.
+  + **GetType** liefert den Typ der Instatnz.
+  + **GetTypeCode** liefert den TypeCode der Instanz.
+  + **ToString** wandelt ein Objekt in eine String um.
 
 #### Erläutern Sie das Überladen von Methoden
 Methoden können überladen werden, um mehrer Methode, die den selben Zweck erfüllen, die selbe bezeichnung haben können.
@@ -322,6 +323,7 @@ Das Resultat ist:
   + Events: sind Klassenmember, die es einem Objekt erlauben seine sogenannten  **subscribers** zu benachrichtigen, sobald etwas erwähenswertes passiert ist. Beispiele hierfür wären, dass sich der Wert eines Feldes oder eines Properties ändern oder auch nach gewissen Benutzerinteraktionen. Der Client hat einen Codteil, den sogenannten **event handler** der auf diese Benachrichtigungen reagiert.
   + Deconstructors: Objekte die nicht mehr benötigt werden, werden von der CLR erkannt und deren Dekonstruktor wird aufgerufen. Dadurch wird nicht mehr benötigter Speicherplatz freigegeben.
   + Nested Types: Klassen können sogenannte **inner classes** haben. Dies bedeutet, eine Klasse hat wiederum eine Klasse in sich.
+
 ```
 public class Container
 {
