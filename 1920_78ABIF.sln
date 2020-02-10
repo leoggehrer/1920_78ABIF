@@ -21,6 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOP", "OOP", "{7F175C29-E00
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generally", "Generally", "{B186FF18-6F45-4163-8722-12F90159066F}"
 	ProjectSection(SolutionItems) = preProject
+		OOP\Generally\CreationProcess.md = OOP\Generally\CreationProcess.md
 		OOP\Generally\Garbage.md = OOP\Generally\Garbage.md
 	EndProjectSection
 EndProject
