@@ -1,76 +1,73 @@
 ### Compiler, Interpreter, Linker, Make
+---
+Autor: Philipp Haller, 7AKIF
 
-**Datei:** CreationProcess.md
+Datei: [CreationProcess.pdf](./CreationProcess.pdf)
 
-##### Allgemeines
-Die Aufgabe eines Compilers oder Interpreters ist es den Source Code, welcher mit einer höheren
-Programmiersprache geschrieben wurde, in den gewünschten Assembler und schlussendlich  in Maschinensprache umzuwandeln, um ein lauffähiges Programm – das Binary- zu erhalten. Für jeden Prozessor gibt es einen eigenen Assembler, welcher die Maschinensprache in Form von mehr oder weniger lesbaren Befehlen darstellt. Grundsätzlich wird zwischen Compiler, Interpreter und JIT-Compiler unterschieden. Ihre Verwendung richtet sich nach der eingesetzten Hochsprache.  
+---
+#### Compiler
 
-<table>
- <tr>
-  <td>Compiler</´td>
-  <td> Pascal, Modula, COBOL, Fortran, C, C++,… </td>
- <tr>
-<tr>
-  <td>Interpreter</´td>
-  <td> BASIC, Smalltalk, LISP, Phyton,… </td>
- <tr>
-<tr>
-  <td>JIT-Compiler</´td>
-  <td> Java, C#, … </td>
- <tr>
-</table>  
-  
+Ein Compiler ist ein Computerprogramm, das den Quellcode einer problemorientierten Programmiersprache  - einer Hochsprache â€“ in ausfÃ¼hrbaren Maschinencode Ã¼bersetzt. Die RÃ¼ckÃ¼bersetzung von Maschinensprache in eine bestimmte Programmiersprache wird Dekompilierung genannt. Zielsprache eines Compilers kann auch Assemblersprache sein, welche dann mit Hilfe eines Assemblers in Maschinensprache umgewandelt wird. Im Unterschied zum Interpreter Ã¼bersetzt der Compiler den kompletten Quellcode mit einem Mal in ausfÃ¼hrbaren Code. Das somit erzeugte Programm kann danach beliebig oft ohne erneute Kompilierung gestartet werden. Bei der AusfÃ¼hrung des Programms werden die Anweisungen direkt vom Prozessor verarbeitet. Die Reihenfolge in der die Instruktionen ausgefÃ¼hrt werden, wurde vorher durch den Compiler festgelegt. MÃ¼ssen Instruktionen nicht aufeinander warten, kÃ¶nnen diese auch parallel ausgefÃ¼hrt werden. 
 
-##### Der Compiler
-Der Compiler übersetzt den kompletten Quelltext mit einem Mal in ausführbaren Code. Das somit erzeugte Programm kann danach beliebig oft ohne erneute Compilierung gestartet werden. Bei der Ausführung des Programms werden die Anweisungen direkt vom Prozessor verarbeitet. Die Reihenfolge in der die Instruktionen ausgeführt werden, wurde vorher durch den Compiler festgelegt. Müssen Instruktionen nicht aufeinander warten, können diese auch parallel ausgeführt werden.
+![Compiler.png](./Compiler.png)
+ 
+Der Kompilierungsprozess gliedert sich im Allgemeinen  in die Analysephase (Frontend) sowie die Synthesephase (Backend), welche das Zielprogramm erzeugt. Er setzt sich aus folgenden VorgÃ¤ngen zusammen.
 
-![compiler.png](compiler.png)
+-	**SyntaxprÃ¼fung:**
 
-<table>
- <tr>
-  <td><b>+</b></td>
-  <td>Die Übersetzung in ausführbaren Code ist effizient und führt zu einem optimierten Code. Compilierte Programme arbeiten sehr schnell, was sich besonders bei größeren Programmen mit langer Laufzeit lohnt.</td>
- <tr>
-<tr>
-  <td><b>-</b></td>
-  <td>Sobald ein neues Betriebssystem oder ein neuer Prozessor zum Einsatz kommt, muss der Quelltext neu compiliert werden. In der Praxis verfügen jedoch sowohl Betriebssysteme als auch Prozessoren über einen sogenannten Kompatibilitätsmodus, welcher auch das Ausführen „älterer“ Programme erlaubt. </td>
- <tr>
-<tr>
-  <td><b>-</b></td>
-  <td> Der Aufwand bei der Software-Entwicklung steigt, da bei jeder Quelltext-Änderung neu compiliert werden muss, um das Programm zu testen. </td>
- <tr>
-</table> 
+    Es wird Ã¼berprÃ¼ft, ob der Syntax der Quellsprache entspricht, der Quellcode ein ausfÃ¼hrbares Programm darstellt und ob Fehler vorhanden sind. Das Ergebnis dieses Vorganges ist eine Zwischendarstellung des Quellcodes.
+
+-	**Analyse und Optimierung:**
+
+    Die Zwischendarstellung wird analysiert und optimiert, wobei Umfang und QualitÃ¤t der Analyse je nach Compiler stark variieren kann.
+
+-	**Codeerzeugung:**
+
+    Die optimierte Zwischendarstellung wird in ausfÃ¼hrbare Befehle der Zielsprache Ã¼bersetzt.
+
+**Vorteil:**
+-	Die Ãœbersetzung in ausfÃ¼hrbaren Code ist effizient und fÃ¼hrt zu einem optimierten Code. Kompilierte Programme arbeiten sehr schnell, was sich besonders bei grÃ¶ÃŸeren Programmen mit langer Laufzeit lohnt.
+
+**Nachteile:**
+-	Sobald ein neues Betriebssystem oder ein neuer Prozessor zum Einsatz kommt, muss der Quelltext neu kompiliert werden. In der Praxis verfÃ¼gen jedoch sowohl Betriebssysteme als auch Prozessoren Ã¼ber einen sogenannten KompatibilitÃ¤tsmodus, welcher auch das AusfÃ¼hren â€Ã¤ltererâ€œ Programme erlaubt.
+-	Der Aufwand bei der Software-Entwicklung steigt, da bei jeder Quelltext-Ã„nderung neu kompiliert werden muss, um das Programm zu testen.
+
+#### Interpreter
+
+Bei Interpreter-Sprachen wird der Programmcode wÃ¤hrend der Laufzeit interpretiert und  umgewandelt.  Sowohl Eingabe als auch Quellcode werden gleichzeitig bearbeitet. Jede Zeile mit einer Instruktion hat eine unmittelbare Aktion des Interpreters zur Folge. Die Arbeitsschritte folgen in logischer Reihenfolge laut Vorgaben des Quellcodes. Der grÃ¶ÃŸte Nachteil eines Interpreters ist die geringe AusfÃ¼hrgeschwindigkeit, welche auf die meist direkte Umsetzung des Quellcode in Maschinencode zurÃ¼ckzufÃ¼hren ist. Eine umfangreiche Codeoptimierung kann wÃ¤hrend der Laufzeit nicht erfolgen.
+ 
+![Interpreter.png](./Interpreter.png)
+
+**Vorteil:**
+-	Das Programm kann direkt gestartet werden, ohne dass der Programmcode vom Anwender in irgendeiner Weise verÃ¤ndert oder umgewandelt werden muss.
+
+**Nachteil:**
+-	Interpretierte Programme sind langsamer und ineffizienter. Dieselben Programmteile -wie Schleifen und Funktionen-  mÃ¼ssen erneut Ã¼bersetzt werden.
+
+#### JIT-Compiler
+
+Just in Time Compiler sind eine Kombination aus Compiler und Interpreter. Man kann sich einen JIT-Compiler als eine virtuelle Maschine in Form eines kÃ¼nstlichen Prozessors vorstellen. Der vorliegende Programmcode wird mit Hilfe eines Compilers in einen plattformunabhÃ¤ngigen Bytecode â€“ den Maschinencode des kÃ¼nstlichen Prozessors- umgewandelt. Bei der AusfÃ¼hrung des Programms lÃ¤uft der virtuelle Prozessor im Hintergrund  und wandelt den Bytecode in die eigentliche Maschinensprache um. Aufgrund der Tatsache, dass die Kompilierung wÃ¤hrend der Laufzeit durchgefÃ¼hrt wird, ist auch sie in ihrem Umfang beschrÃ¤nkt und konzentriert sich meistens auf die hÃ¤ufig ausgefÃ¼hrten Programmteile, welche einen GroÃŸteil der AusfÃ¼hrzeit in Anspruch nehmen.
+Bekannte Beispiele sind der JAVA-JIT-Compiler mit dem erzeugten Java-Byte-Code und der JIT- oder NGN-Compiler der .NET Umgebung, welcher den Intermediate-Language Code generiert.
+
+**Vorteile:**
+-	Der JIT-Compiler bietet die MÃ¶glichkeit den einmal geschriebenen Quelltext auf unterschiedlichen Plattformen einzusetzen, da der kÃ¼nstliche Prozessor fÃ¼r jede geeignete Hardware ausprogrammiert werden kann.
+-	Geschwindigkeitssteigerung im Vergleich zu einem Interpreter
 
 
-##### Der Interpreter
-Bei Interpreter-Sprachen wird der Programmcode während der Laufzeit interpretiert und  umgewandelt.  Sowohl Eingabe und als auch Quellcode werden gleichzeitig bearbeitet. Jede Zeile mit einer Instruktion hat eine unmittelbare Aktion des Interpreters zur Folge. Die Arbeitsschritte folgen in logischer Reihenfolge laut Vorgaben des Quellcodes.
+#### Beispiele fÃ¼r den Einsatz von  Compiler, Interpreter und JIT-Compiler
 
-![interpreter.png](interpreter.png) 
+Ob ein  Compiler, Interpreter oder JIT-Compiler verwendet wird, richtet sich nach der eingesetzten Hochsprache.
 
-<table>
- <tr>
-  <td><b>+</b></td>
-  <td>Das Programm kann direkt gestartet werden ohne das der Programmcode vom Anwender in irgendeiner Weise verändert oder umgewandelt werden muss.</td>
- </tr>
- <tr>
-  <td><b>+</b></td>
-  <td>Interpretierte Programme sind langsamer und ineffizienter. Dieselben Programmteile, wie Schleifen und Funktionen müssen erneut übersetzt werden.</td>
- </tr>
-</table> 
+- **Compiler:**	Pascal, Modula, COBOL, Fortran, C, C++, â€¦
+- **Interpreter:**	BASIC, Smalltalk, LISP, Phyton, â€¦
+- **JIT-Compiler:**	Java, C#, â€¦
 
-##### JIT-Compiler
-Just in Time Compiler sind eine Kombination aus Compiler und Interpreter. Man kann sich einen JIT-Compiler als eine virtuelle Maschine in Form eines künstlichen Prozessors vorstellen. Der vorliegende Programmcode wird mit Hilfe eines Compilers in den sogenannten Bytecode – dem Maschinencode des künstlichen Prozessors- umgewandelt. Bei der Ausführung des Programms läuft der virtuelle Prozessor im Hintergrund  und wandelt den Bytecode in die eigentliche Maschinensprache um.
 
-<table>
- <tr>
-  <td><b>+</b></´td>
-  <td>Der JIT-Compiler bietet die Möglichkeit den einmal geschriebenen Quelltext auf unterschiedlichen Plattformen einzusetzen, da der künstliche Prozessor für jede geeignete Hardware ausprogrammiert werden kann.</td>
- </tr>
-</table> 
+#### Linker
 
-##### Linker
-Nachdem der Compiler die Dateien in Maschinencode übersetzt hat, fügt der Linker diese Objektdateien zu einem kompletten Programm zusammen. Er überprüft welche externen Definitionen noch fehlen und durchsucht dabei sowohl die vorliegenden Objekt-Dateien als auch die vorcompilierten Standardbibliotheken. Bei fehlenden Definitionen kommt es zu einem Linker-Fehler. Im Fall dass alle Angaben vorhanden sind, wird aus den compilierten Teilen und den benötigten Bibliotheken eine einzige Datei erstellt, welche das lauffähige Programm darstellt.
+Nachdem der Compiler die Dateien in Maschinencode Ã¼bersetzt hat, fÃ¼gt der Linker diese Objektdateien zu einem kompletten Programm zusammen. Die kompilierten Module mit Funktionen kÃ¶nnen in Funktionsbibliotheken (Programmbibliotheken) gespeichert werden. Um ein Programmmodul in einem anderen Programm verwendet zu kÃ¶nnen, mÃ¼ssen die symbolischen Adressen der Funktionen in Speicheradressen umgewandelt werden.  Der Linker Ã¼berprÃ¼ft welche externen Definitionen noch fehlen und durchsucht dabei sowohl die vorliegenden Objekt-Dateien als auch die vorkompilierten Standardbibliotheken. Bei fehlenden Definitionen kommt es zu einem Linker-Fehler. Sind alle Angaben vorhanden, kann aus den kompilierten Teilen und den benÃ¶tigten Bibliotheken eine einzige Datei erstellt, welche das lauffÃ¤hige Programm darstellt.
 
-##### Make
-Make ist ein Build-Management Tool für Projekte, in denen der Quellcode in verschiedenen Dateien vorliegt. Hierbei steuert das Tool automatisiert alle Arbeitsschritte (Übersetzten, Linken, Dateien kopieren etc.) bis ein fertig, ausführbares Programm vorliegt. Das resultierende Makefile erfasst alle Abhängigkeiten und beschreibt somit welche Quelltextdateien durch den Compiler zu welchen Objektdateien verarbeitet werden sowie welche Objektdateien durch den Linker zu Programmbibliotheken oder anderen ausführbaren Programmen verbunden werden. Vor allem bei großen Programmpaketen müssen somit bei kleinen Änderungen nicht alle Teile neu compiliert werden.
+#### Make
+
+Make ist ein Build-Management Tool fÃ¼r Projekte, in denen der Quellcode in verschiedenen Dateien vorliegt. Hierbei steuert das Tool automatisiert alle Arbeitsschritte (Ãœbersetzten, Linken, Dateien kopieren etc.) bis ein fertig, ausfÃ¼hrbares Programm vorliegt. Das resultierende Makefile erfasst alle AbhÃ¤ngigkeiten im Ãœbersetzungsprozess und beschreibt somit welche Quelltextdateien durch den Compiler zu welchen Objektdateien verarbeitet werden und welche Objektdateien durch den Linker zu Programmbibliotheken oder anderen ausfÃ¼hrbaren Programmen verbunden werden. Vor allem bei groÃŸen Programmpaketen mÃ¼ssen somit bei kleinen Ã„nderungen nicht alle Teile neu kompiliert werden.
+

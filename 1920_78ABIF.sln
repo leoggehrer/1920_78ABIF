@@ -13,20 +13,59 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Terms", "Terms", "{C9273CFD-0501-41E9-807C-B6317370F591}"
 	ProjectSection(SolutionItems) = preProject
+		Terms\Bibliothek.png = Terms\Bibliothek.png
+		Terms\CarClassDiagram.png = Terms\CarClassDiagram.png
+		Terms\Collection.png = Terms\Collection.png
+		Terms\CollectionOutput.PNG = Terms\CollectionOutput.PNG
+		Terms\CollectionOverview.png = Terms\CollectionOverview.png
+		Terms\Comparison.md = Terms\Comparison.md
+		Terms\Comparison.pdf = Terms\Comparison.pdf
+		Terms\DataStructures.md = Terms\DataStructures.md
+		Terms\List.png = Terms\List.png
+		Terms\ListImplementation.jpg = Terms\ListImplementation.jpg
+		Terms\ListOutput.png = Terms\ListOutput.png
 		Terms\OrderTerms.md = Terms\OrderTerms.md
+		Terms\OutputStack.png = Terms\OutputStack.png
+		Terms\Queue.png = Terms\Queue.png
+		Terms\QueueImplement.png = Terms\QueueImplement.png
+		Terms\QueueOutput.png = Terms\QueueOutput.png
+		Terms\Stack.png = Terms\Stack.png
+		Terms\StackImplement.jpg = Terms\StackImplement.jpg
+		Terms\sudoUpdatePackage.png = Terms\sudoUpdatePackage.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOP", "OOP", "{7F175C29-E004-4320-9000-BA1370816047}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generally", "Generally", "{B186FF18-6F45-4163-8722-12F90159066F}"
 	ProjectSection(SolutionItems) = preProject
+		OOP\Generally\Compiler.png = OOP\Generally\Compiler.png
 		OOP\Generally\CreationProcess.md = OOP\Generally\CreationProcess.md
+		OOP\Generally\CreationProcess.pdf = OOP\Generally\CreationProcess.pdf
+		OOP\Generally\ExceptionHandling.md = OOP\Generally\ExceptionHandling.md
+		OOP\Generally\ExceptionHandling.pdf = OOP\Generally\ExceptionHandling.pdf
 		OOP\Generally\Garbage.md = OOP\Generally\Garbage.md
+		OOP\Generally\HierachieExceptions.jpg = OOP\Generally\HierachieExceptions.jpg
+		OOP\Generally\Interpreter.png = OOP\Generally\Interpreter.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concepts", "Concepts", "{BF6D70EB-E523-42E3-B135-5E8EBB148363}"
 	ProjectSection(SolutionItems) = preProject
+		Concepts\Generics.md = Concepts\Generics.md
+		Concepts\Serialisierung.pptx = Concepts\Serialisierung.pptx
 		Concepts\Serializable.md = Concepts\Serializable.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{58EEFB16-2EDE-4071-82E3-12E5BB61A1AD}"
+	ProjectSection(SolutionItems) = preProject
+		Patterns\Iterator.md = Patterns\Iterator.md
+		Patterns\Iterator.pdf = Patterns\Iterator.pdf
+		Patterns\Mvc.md = Patterns\Mvc.md
+		Patterns\MVC.pptx = Patterns\MVC.pptx
+		Patterns\MVC_Model.png = Patterns\MVC_Model.png
+		Patterns\MvvM.md = Patterns\MvvM.md
+		Patterns\mvvmMuster.png = Patterns\mvvmMuster.png
+		Patterns\MVVMPattern.png = Patterns\MVVMPattern.png
+		Patterns\Singleton.md = Patterns\Singleton.md
 	EndProjectSection
 EndProject
 Global
@@ -38,6 +77,7 @@ Global
 		{7F175C29-E004-4320-9000-BA1370816047} = {1ADEF5B3-B3AB-41FA-A0B7-4F39641C93A3}
 		{B186FF18-6F45-4163-8722-12F90159066F} = {7F175C29-E004-4320-9000-BA1370816047}
 		{BF6D70EB-E523-42E3-B135-5E8EBB148363} = {1ADEF5B3-B3AB-41FA-A0B7-4F39641C93A3}
+		{58EEFB16-2EDE-4071-82E3-12E5BB61A1AD} = {1ADEF5B3-B3AB-41FA-A0B7-4F39641C93A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76745DB8-3F30-4DB6-963A-FF42BB86ACC4}
