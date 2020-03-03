@@ -149,7 +149,7 @@ public ClassA : IIdentifiable, ICopyName
 }
 ```
 
-<span style="color:darkblue">Interfaces können Interfaces implementieren
+<span style="color:darkblue">Interfaces können Interfaces erben
 </span>  
 
 Beispiel:
