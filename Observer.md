@@ -5,7 +5,7 @@ Beschreiben Sie das Muster nach den folgenden Punkten:
 
 - Klassifikation  
 <span style="color:darkblue">
-Observer Pattern zählt zu den Architektur Patter.
+Observer Pattern zählt zu den Design Pattern.
 </span>
 - Zweck  
 <span style="color:darkblue">
@@ -20,6 +20,7 @@ Ein Observable wird von *n* Observer beobachtet. Sobald ein Ereignis, Event oder
 - Anwendbarkeit  
 <span style="color:darkblue">
 MVC Pattern - wenn sich Werte ändern müssen diese in der GUI aktualisiert werden.  
+Sensor Messwerte - nur wenn sich der Wert ändert wird dieser weitergegeben.  
 Simulationen - Eine FastClock wird verwendet um die Simualtion zu beschleunigen, und deshalb müssen Werte z.B.: 1000 mal in der Sekunde aktualisiert werden.
 </span>
 - Struktur des Musters  
