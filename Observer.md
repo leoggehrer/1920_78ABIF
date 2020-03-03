@@ -13,9 +13,9 @@ Klassen voneinander zu entkoppeln. Sie erhalten nur die Informationen die für di
 </span>
 
 - Entwurfsproblem und wie das Muster das Problem löst  
-<span style="color:darkblue"> Das Problem dabei ist das eine Klasse viel zu viel über die anderen Klasse weis um die änderungen mitzubekommen.  
+<span style="color:darkblue"> Das Problem dabei ist das immer alle Observer verständigt werden, auch wenn sie nicht mehr an den Benachrichtigungen interessiert sind.  
 Lösung:  
-Ein Observable wird von *n* Observer beobachtet. Sobald ein Ereignis, Event oder Wert eintrifft/ändert verständigt der Observable alle Observer die am Observable registriert sind mit den dazugehörigen Informationen. Die Klassen wissen sonst nichts voneinander.
+Ein Observable wird von *n* Observer beobachtet. Sobald ein Ereignis, Event oder Wert eintrifft/ändert verständigt der Observable alle Observer die am Observable registriert sind mit den dazugehörigen Informationen. Sobald ein Observer nicht mehr an den Benachrichtigungen interessiert ist, kann sich dieser beim Observable wieder abmelden. Somit wird dieser nicht mehr verständigt.
 </span>
 - Anwendbarkeit  
 <span style="color:darkblue">
